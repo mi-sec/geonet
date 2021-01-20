@@ -1,5 +1,14 @@
 'use strict';
 
+/**
+ * gdalPixelToCoordinate
+ * @description
+ * returns the earth coordinates of a specific pixel
+ * @param {*} ds - gdal dataset, assumed to be opened
+ * @param {number} col - column index of pixel
+ * @param {number} row - row index of pixel
+ * @returns {*[]} - earth coordinates in an array (lng, lat)
+ */
 function gdalPixelToCoordinate( ds, col, row ) {
 	const [ c, a, b, f, d, e ] = ds.geoTransform;
 
