@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/gdal-pixel-to-coordinate",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Extract coordinates from a pixel gdal dataset.geoTransform",
 	"main": "lib/gdal-pixel-to-coordinate.js",
 	"exports": {
