@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/generate-raster-footprint",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Generate GeoJSON footprint for a given raster",
 	"main": "lib/generate-raster-footprint.js",
 	"scripts": {
