@@ -33,7 +33,7 @@ function arrayDeepAverage( ...params ) {
 
 		return obj;
 	}
-	
+
 	const result = gatherAverage( params );
 	return result.sum / result.count;
 }
