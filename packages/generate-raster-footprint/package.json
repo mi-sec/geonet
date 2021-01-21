@@ -1,8 +1,8 @@
 {
-	"name": "@geonet/gdal-pixel-to-coordinate",
-	"version": "1.0.2",
-	"description": "Extract coordinates from a pixel gdal dataset.geoTransform",
-	"main": "lib/gdal-pixel-to-coordinate.js",
+	"name": "@geonet/generate-raster-footprint",
+	"version": "1.0.0",
+	"description": "Generate GeoJSON footprint for a given raster",
+	"main": "lib/generate-raster-footprint.js",
 	"scripts": {
 		"build": "gen-esm-wrapper ./lib/* ./esm/$(basename `pwd`).mjs",
 		"lint": "eslint .",
@@ -11,8 +11,8 @@
 	},
 	"exports": {
 		".": {
-			"require": "./lib/gdal-pixel-to-coordinate.js",
-			"import": "./esm/gdal-pixel-to-coordinate.mjs"
+			"require": "./lib/generate-raster-footprint.js",
+			"import": "./esm/generate-raster-footprint.mjs"
 		},
 		"./": "./"
 	},
@@ -43,5 +43,13 @@
 		"gen-esm-wrapper": "^1.1.1",
 		"mocha": "^8.2.1",
 		"nyc": "^15.1.0"
+	},
+	"dependencies": {
+		"@geonet/gdal-pixel-to-coordinate": "^1.0.2",
+		"@mapbox/geojson-rewind": "^0.5.0",
+		"@turf/bbox-polygon": "^6.3.0",
+		"@turf/helpers": "^6.3.0",
+		"@turf/transform-scale": "^6.3.0",
+		"@turf/union": "^6.3.0"
 	}
 }

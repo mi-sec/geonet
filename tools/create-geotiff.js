@@ -33,6 +33,27 @@ const gdal = require( 'gdal-next' );
 	const outband = src.bands.get( 1 );
 	const buf     = Buffer.alloc( blockSize * blockSize ).fill( 0xFF );
 
+	outband.noDataValue = 0;
+	for ( let i = 0; i < buf.length; i++ ) {
+		if (
+			( i > 64 * 26 + 24 && i < 64 * 26 + 40 ) ||
+			( i > 64 * 27 + 24 && i < 64 * 27 + 40 ) ||
+			( i > 64 * 28 + 24 && i < 64 * 28 + 40 ) ||
+			( i > 64 * 29 + 24 && i < 64 * 29 + 40 ) ||
+			( i > 64 * 30 + 24 && i < 64 * 30 + 40 ) ||
+			( i > 64 * 31 + 24 && i < 64 * 31 + 40 ) ||
+			( i > 64 * 32 + 24 && i < 64 * 32 + 40 ) ||
+			( i > 64 * 33 + 24 && i < 64 * 33 + 40 ) ||
+			( i > 64 * 34 + 24 && i < 64 * 34 + 40 ) ||
+			( i > 64 * 35 + 24 && i < 64 * 35 + 40 ) ||
+			( i > 64 * 36 + 24 && i < 64 * 36 + 40 ) ||
+			( i > 64 * 37 + 24 && i < 64 * 37 + 40 ) ||
+			( i > 64 * 38 + 24 && i < 64 * 38 + 40 )
+		) {
+			buf[ i ] = 0x0;
+		}
+	}
+
 	const data = new Uint8Array( buf );
 	outband.pixels.write( 0, 0, blockSize, blockSize, data );
 

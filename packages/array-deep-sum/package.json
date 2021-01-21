@@ -1,8 +1,8 @@
 {
-	"name": "@geonet/gdal-pixel-to-coordinate",
-	"version": "1.0.2",
-	"description": "Extract coordinates from a pixel gdal dataset.geoTransform",
-	"main": "lib/gdal-pixel-to-coordinate.js",
+	"name": "@geonet/array-deep-sum",
+	"version": "1.0.0",
+	"description": "Generic array deep sum",
+	"main": "lib/array-deep-sum.js",
 	"scripts": {
 		"build": "gen-esm-wrapper ./lib/* ./esm/$(basename `pwd`).mjs",
 		"lint": "eslint .",
@@ -11,8 +11,8 @@
 	},
 	"exports": {
 		".": {
-			"require": "./lib/gdal-pixel-to-coordinate.js",
-			"import": "./esm/gdal-pixel-to-coordinate.mjs"
+			"require": "./lib/array-deep-sum.js",
+			"import": "./esm/array-deep-sum.mjs"
 		},
 		"./": "./"
 	},
@@ -39,7 +39,6 @@
 	"devDependencies": {
 		"chai": "^4.2.0",
 		"eslint": "^7.18.0",
-		"gdal-next": "^2.6.2",
 		"gen-esm-wrapper": "^1.1.1",
 		"mocha": "^8.2.1",
 		"nyc": "^15.1.0"
