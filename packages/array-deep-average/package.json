@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/array-deep-average",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Generic array average calculation",
 	"main": "lib/array-deep-average.js",
 	"scripts": {
