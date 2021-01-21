@@ -4,6 +4,7 @@ const path                         = require( 'path' );
 const gdal                         = require( 'gdal-next' );
 const geojsonRewind                = require( '@mapbox/geojson-rewind' );
 const gdalPixelToCoordinate        = require( '@geonet/gdal-pixel-to-coordinate' );
+const arrayDeepAverage             = require( '@geonet/array-deep-average' );
 const turfHelpers                  = require( '@turf/helpers' );
 const turfTransformScale           = require( '@turf/transform-scale' );
 const { default: turfBboxPolygon } = require( '@turf/bbox-polygon' );
@@ -38,11 +39,7 @@ async function generateRasterFootprint( fpath, fband = 1, fblockSize = 1024, tra
 		const data = new Float32Array( Buffer.allocUnsafe( blockSize * blockSize ) );
 		band.pixels.read( x, y, blockSize, blockSize, data );
 
-		let average = 0;
-		for ( let i = 0; i < data.length; i++ ) {
-			average += data[ i ];
-		}
-		average /= data.length;
+		const average = arrayDeepAverage( data );
 
 		if ( average !== band.noDataValue ) {
 			let poly = turfBboxPolygon( [
