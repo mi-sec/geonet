@@ -1,6 +1,6 @@
 # `@geonet/array-deep-sum`
 
-> Add up all values in an array
+> Add up all values in an array recursively
 
 ## Usage
 

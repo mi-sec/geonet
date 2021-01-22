@@ -1,7 +1,7 @@
 {
 	"name": "@geonet/array-deep-average",
 	"version": "1.0.2",
-	"description": "Generic array average calculation",
+	"description": "Average all values in an array recursively",
 	"main": "lib/array-deep-average.js",
 	"scripts": {
 		"build": "gen-esm-wrapper ./lib/* ./esm/$(basename `pwd`).mjs",

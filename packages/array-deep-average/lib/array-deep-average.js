@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * arrayDeepAverage
+ * @description
+ * average all values in an array recursively
+ * @param {[]|[number]} params - array of numbers (nested or flat)
+ * @returns {number} - average of input
+ */
 function arrayDeepAverage( ...params ) {
 	function gatherAverage( ...p ) {
 		const obj = { sum: 0, count: 0 };

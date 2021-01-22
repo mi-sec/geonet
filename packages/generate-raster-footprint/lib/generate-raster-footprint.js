@@ -11,6 +11,24 @@ const { default: turfBboxPolygon } = require( '@turf/bbox-polygon' );
 const { default: turfUnion }       = require( '@turf/union' );
 
 // TODO::: determine blockSize based on pixel resolution
+/**
+ * generateRasterFootprint
+ * @description
+ * Generate GeoJSON footprint for a given raster
+ * @param {string} fpath
+ * path to file
+ * @param {number} [fband=1]
+ * band to create a footprint of (typically 1)
+ * @param {number} [fblockSize=1024]
+ * block size to average and evaluate against the noDataValue
+ * for example `1024` would be the average of a 1024 pixel block; if the block average is equal to the `noDataValue`,
+ * the area is not added to the footprint overview
+ * @param {number} [transformScaleBuffer=0]
+ * sometimes footprints have lines that should be merged, but precision float errors prevent it
+ * optionally transform scale a buffer around each assessed pixel block to prevent merge issues
+ * scale of `1.0001` to `1.1` is recommended. see http://turfjs.org/docs/#transformScale for more info
+ * @returns {Promise<object>} - footprint returned in a feature collection
+ */
 async function generateRasterFootprint( fpath, fband = 1, fblockSize = 1024, transformScaleBuffer = 0 ) {
 	fpath         = path.resolve( fpath );
 	const dataset = await gdal.openAsync( fpath );

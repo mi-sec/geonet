@@ -1,6 +1,6 @@
 # `@geonet/array-deep-average`
 
-> Average all values in an array
+> Average all values in an array recursively
 
 ## Usage
 

@@ -12,9 +12,10 @@ module.exports = {
 	},
 
 	globals: {
-		before: true,
 		after: true,
 		afterEach: true,
+		before: true,
+		beforeEach: true,
 		describe: true,
 		it: true,
 		JSON: true,
@@ -247,11 +248,13 @@ module.exports = {
 			}
 		],
 		'space-before-blocks': [ 'warn', 'always' ],
-		'space-before-function-paren': [ 'warn', {
-			anonymous: 'never',
-			named: 'never',
-			asyncArrow: 'always'
-		} ],
+		'space-before-function-paren': [
+			'warn', {
+				anonymous: 'never',
+				named: 'never',
+				asyncArrow: 'always'
+			}
+		],
 		'space-in-parens': [ 'warn', 'always' ],
 		'space-infix-ops': 'warn',
 		'space-unary-ops': [

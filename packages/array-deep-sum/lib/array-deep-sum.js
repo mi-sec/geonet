@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+ * arrayDeepSum
+ * @description
+ * add up all values in an array recursively
+ * @param {[]|[number]} params - array of numbers (nested or flat)
+ * @returns {number} - sum of input
+ */
 function arrayDeepSum( ...params ) {
 	let n = 0;
 
