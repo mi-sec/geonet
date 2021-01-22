@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/generate-raster-footprint",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Generate GeoJSON footprint for a given raster",
 	"main": "lib/generate-raster-footprint.js",
 	"scripts": {
@@ -45,8 +45,8 @@
 		"nyc": "^15.1.0"
 	},
 	"dependencies": {
-		"@geonet/array-deep-average": "^1.0.2",
-		"@geonet/gdal-pixel-to-coordinate": "^1.0.3",
+		"@geonet/array-deep-average": "^1.0.3",
+		"@geonet/gdal-pixel-to-coordinate": "^1.0.4",
 		"@mapbox/geojson-rewind": "^0.5.0",
 		"@turf/bbox-polygon": "^6.3.0",
 		"@turf/helpers": "^6.3.0",

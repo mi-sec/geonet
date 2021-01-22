@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/array-deep-average",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Average all values in an array recursively",
 	"main": "lib/array-deep-average.js",
 	"scripts": {

@@ -1,6 +1,6 @@
 {
 	"name": "@geonet/array-deep-sum",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Generic array deep sum",
 	"main": "lib/array-deep-sum.js",
 	"scripts": {
